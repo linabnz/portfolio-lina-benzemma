@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.7.1/tsparticles.bundle.min.js"></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        #tsparticles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+        
+    </style>
+</head>
+<body class="bg-gray-900 text-white relative">
+    <div id="tsparticles"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            tsParticles.load("tsparticles", {
+                fpsLimit: 60,
+                particles: {
+                    number: { value: 100, density: { enable: true, value_area: 800 } },
+                    color: { value: "#0ff0fc" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 3, random: true },
+                    move: { enable: true, speed: 1, direction: "none", out_mode: "bounce" },
+                    line_linked: { enable: true, distance: 150, color: "#0ff0fc", opacity: 0.5, width: 1 }
+                },
+                interactivity: {
+                    detectsOn: "canvas",
+                    events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
+                    modes: { grab: { distance: 140, line_linked: { opacity: 1 } }, push: { particles_nb: 4 } }
+                },
+                retina_detect: true
+            });
+        });
+    </script>
+    
+    <!-- Navigation -->
+    <nav class="bg-gray-800 shadow-md p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-blue-400">My Portfolio</h1>
+            <ul class="flex space-x-6">
+                <li><a href="about.html" class="hover:text-blue-400"> About me </a></li>
+                <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
+                <li><a href="end_page.html" class="hover:text-orange-400">Thank You</a></li>
+
+
+            </ul>
+        </div>
+    </nav>
+    
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    </head>
+    
+    <!-- Section Accueil avec Animation Réseaux de Neurones -->
+    <header class="h-screen flex flex-col justify-center items-center text-center px-4 relative glass">
+        <h2 class="text-5xl font-bold text-white drop-shadow-lg">Hello, I am <span class="text-blue-400">Lina Benzemma</span></h2>
+        <p class="mt-4 text-lg text-white drop-shadow-lg">I am passionate about Machine Learning, Data Science, and Big Data. Discover my portfolio!</p>
+        <div class="mt-6 flex space-x-4">
+            <a href="https://www.linkedin.com/in/linabenzemma11" target="_blank" class="text-orange-400 hover:text-orange-300 text-lg">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://github.com/linabnz" target="_blank" class="text-orange-400 hover:text-orange-300 text-lg">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+            
+        </div>
+    </header>
+</body>
+</html>

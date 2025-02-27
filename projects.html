@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.7.1/tsparticles.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        #tsparticles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white relative">
+    <div id="tsparticles"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            tsParticles.load("tsparticles", {
+                fpsLimit: 60,
+                particles: {
+                    number: { value: 100, density: { enable: true, value_area: 800 } },
+                    color: { value: "#008CFF" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 3, random: true },
+                    move: { enable: true, speed: 1, direction: "none", out_mode: "bounce" },
+                    line_linked: { enable: true, distance: 150, color: "#008CFF", opacity: 0.5, width: 1 }
+                },
+                interactivity: {
+                    detectsOn: "canvas",
+                    events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
+                    modes: { grab: { distance: 140, line_linked: { opacity: 1 } }, push: { particles_nb: 4 } }
+                },
+                retina_detect: true
+            });
+        });
+    </script>
+    
+    <nav class="bg-gray-800 shadow-md p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-orange-400">Projects</h1>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-orange-400">Home</a></li>
+                <li><a href="about.html" class="hover:text-orange-400">About me </a></li>
+                <li><a href="end_page.html" class="hover:text-orange-400">Thank You</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="container mx-auto my-24 p-6">
+        <h2 class="text-4xl font-bold text-white text-center">My Projects</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-500 hover:scale-105">
+                <h3 class="text-xl font-bold text-orange-400">Cryptocurrency Volatility Prediction and Portfolio Strategy</h3>
+                <p class="text-sm text-gray-400">Dec. 2024 - Feb. 2025 | Paris 1 Panthéon-Sorbonne</p>
+                <p class="mt-2">Prediction of cryptocurrency volatility using AI models (GRU, LSTM, TCNN). Portfolio allocation strategies to maximize returns and manage risks. Development of a modular Python package and a FastAPI API for analysis.</p>
+                <a href="https://github.com/linabnz/crypto-volatility-lab" class="text-blue-400 hover:text-blue-300 block mt-2">🔗 GitHub - crypto-volatility-lab</a>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-500 hover:scale-105">
+                <h3 class="text-xl font-bold text-orange-400">Traffic Volume Prediction on I-94</h3>
+                <p class="text-sm text-gray-400">Dec. 2024 - Feb. 2025 | Paris 1 Panthéon-Sorbonne</p>
+                <p class="mt-2">Developed an advanced road traffic prediction model using ML and DL techniques to optimize traffic management and anticipate congestion.</p>
+                <a href="https://github.com/linabnz/MOSEF---Projet-Time-Series" class="text-blue-400 hover:text-blue-300 block mt-2">🔗 GitHub - Traffic Volume Prediction</a>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-500 hover:scale-105">
+                <h3 class="text-xl font-bold text-orange-400">Predicting Schizophrenia Using Brain Anatomy</h3>
+                <p class="text-sm text-gray-400">Dec. 2024 - Jan. 2025 | Paris 1 Panthéon-Sorbonne</p>
+                <p class="mt-2">Prediction of schizophrenia using brain morphometry and structural MRI data.</p>
+                <a href="https://github.com/linabnz/Predict-schizophrenia-using-brain-anatomy" class="text-blue-400 hover:text-blue-300 block mt-2">🔗 GitHub - Schizophrenia Prediction</a>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-500 hover:scale-105">
+                <h3 class="text-xl font-bold text-orange-400">MOSEF Bank Churn Prediction - Kaggle Challenge</h3>
+                <p class="text-sm text-gray-400">Nov. 2024 - Jan. 2025 | Paris 1 Panthéon-Sorbonne</p>
+                <p class="mt-2">Applied advanced ML techniques to predict customer churn in banking with high precision.</p>
+                <a href="https://github.com/linabnz/MOSEF-Bank-Churn-Prediction" class="text-blue-400 hover:text-blue-300 block mt-2">🔗 GitHub - Bank Churn Prediction</a>
+            </div>
+    
+            <div class="bg-gray-800 p-6 rounded-lg shadow-md transform transition duration-500 hover:scale-105">
+                    <h3 class="text-xl font-bold text-orange-400">AroundMe</h3>
+                    <p class="text-sm text-gray-400">Nov. 2024 - Dec. 2024 | Paris 1 Panthéon-Sorbonne</p>
+                    <p class="mt-2">AroundMe is an interactive app developed with Bash scripts and Python (Streamlit), allowing users to explore streets of Paris and discover historical and geographical facts.</p>
+                    <a href="https://github.com/emmaebrl/linux-project" class="text-blue-400 hover:text-blue-300 block mt-2">🔗 GitHub - AroundMe</a>
+                </div>
+        </div>
+    </section>
+</body>
+</html>

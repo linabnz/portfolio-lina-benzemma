@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos de Moi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.7.1/tsparticles.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        #tsparticles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+        
+    
+    </style>
+</head>
+<body class="bg-gray-900 text-white relative">
+    <div id="tsparticles"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            tsParticles.load("tsparticles", {
+                fpsLimit: 60,
+                particles: {
+                    number: { value: 100, density: { enable: true, value_area: 800 } },
+                    color: { value: "#008CFF" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 3, random: true },
+                    move: { enable: true, speed: 1, direction: "none", out_mode: "bounce" },
+                    line_linked: { enable: true, distance: 150, color: "#008CFF", opacity: 0.5, width: 1 }
+                },
+                interactivity: {
+                    detectsOn: "canvas",
+                    events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
+                    modes: { grab: { distance: 140, line_linked: { opacity: 1 } }, push: { particles_nb: 4 } }
+                },
+                retina_detect: true
+            });
+        });
+    </script>
+    
+    <nav class="bg-gray-800 shadow-md p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-orange-400"> About me</h1>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="hover:text-orange-400">Accueil</a></li>
+                <li><a href="projects.html" class="hover:text-orange-400">Projects</a></li>
+                <li><a href="end_page.html" class="hover:text-orange-400">Thank You</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4 relative glass">
+        <h2 class="text-5xl font-bold text-white drop-shadow-lg"> who i am  ?</h2>
+        <div class="flex flex-col md:flex-row items-center mt-8">
+            <img src="assets/photolina.jpeg" alt="Photo de Lina Benzemma" class="w-48 h-48 rounded-full shadow-lg mb-4 md:mb-0 md:mr-6">
+            <div class="text-lg text-white drop-shadow-lg max-w-2xl text-justify">
+                <p>I am a Master’s student in <b>Statistical, Economic, and Financial Modeling (MOSEF)</b> at the University Panthéon Sorbonne, currently working as a <b>Data Scientist</b> at <b>Sanofi</b> as part of my apprenticeship.</p>
+<p class="mt-4">Passionate about <b>Data Science</b>, <b>Machine Learning</b>, and <b>Big Data</b>, I have developed strong expertise in <b>statistical modeling</b>, <b>Python development</b>, <b>advanced data analysis</b>, and <b>predictive model engineering</b>.</p>
+</div>
+        </div>
+        <div class="mt-6 flex space-x-4">
+            <a href="assets/cv fr.pdf" download class="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold flex items-center space-x-2 hover:bg-orange-400 transition">
+                <i class="fas fa-file-pdf"></i>
+                <span>CV (FR)</span>
+            </a>
+            <a href="assets/cv en.pdf" download class="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold flex items-center space-x-2 hover:bg-blue-400 transition">
+                <i class="fas fa-file-pdf"></i>
+                <span>CV (EN)</span>
+            </a>
+        </div>
+        
+    </section>
+</body>
+</html>

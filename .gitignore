@@ -10,6 +10,7 @@
 # Ignorer les environnements virtuels
 env/
 venv/
+assets/
 
 
 # Mobile Tools for Java (J2ME)
